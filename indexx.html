@@ -4,39 +4,72 @@
   <meta charset="UTF-8">
   <title>Login - Aden Cool</title>
   <style>
-    body {
-      background-color: #111;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
       font-family: Arial, sans-serif;
     }
+
+    /* Video full screen */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    /* Login box di tengah */
     .login-box {
-      background: #222;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 20px red;
       text-align: center;
+      color: white;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     }
+
     input, button {
       width: 100%;
-      margin-top: 10px;
       padding: 10px;
-      border: none;
+      margin-top: 10px;
       border-radius: 5px;
+      border: none;
     }
+
     button {
       background-color: red;
       color: white;
       font-weight: bold;
       cursor: pointer;
     }
+
+    button:hover {
+      background-color: darkred;
+    }
   </style>
   <script src="assets/stylep.js"></script>
 </head>
 <body>
+
+  <!-- Video background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://files.catbox.moe/af6j5a.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video HTML5.
+  </video>
+
+  <!-- Kotak login -->
   <div class="login-box">
     <h2>Login Admin</h2>
     <input type="text" id="username" placeholder="Username">
