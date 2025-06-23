@@ -61,55 +61,7 @@
   <script src="assets/infowhok.js"></script>
   <script src="assets/musik.js"></script>
   <script src="assets/result.js"></script>
-   <script src="assets/stylep.js"></script>
-  <style>
-    body {
-      background-color: #1a1a1a;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .login-box {
-      background-color: #333;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-    button {
-      background-color: red;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  <div class="login-box">
-    <h2>Login Admin</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">LOGIN</button>
-  </div>
-
-  <script>
-    function login() {
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-
-      if (user === CREDENTIALS.username && pass === CREDENTIALS.password) {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "index.html";
-      } else {
-        alert("Username atau Password salah!");
-      }
-    }
-  </script>
+    
   
 </body>
           </html>
