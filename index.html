@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Informasi & Aksi Telegram By Aden Coll</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <video autoplay loop muted width="225px" height="105px">
+        <source src="https://files.catbox.moe/af6j5a.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="navbar-right"></div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="input-container">
+      <h1>MELACAK PEMILIK BOT TELEGRAM</h1>
+
+      <div>
+        <label for="botToken">Token Bot:</label>
+        <input type="text" id="botToken" name="botToken" placeholder="Masukkan Token Bot">
+      </div>
+
+      <div>
+        <label for="chatId">Chat ID:</label>
+        <input type="text" id="chatId" name="chatId" placeholder="Masukkan Chat ID">
+      </div>
+
+      <br>
+      <button onclick="runAllActions()">LACAK</button>
+    </div>
+  </div>
+
+  <div id="response-area" class="hidden">
+    <h2 id="tokenDisplay" style="color: #4CAF50;"></h2>
+    <h3 id="chatIdDisplay" class="hidden" style="color: #4CAF50;"></h3>
+    <div id="response"></div>
+    <br><br>
+
+    <div id="deleteWebhookButtonContainer" style="display: none;">
+      <button id="deleteWebhookButton" onclick="deleteWebhookFlow()">HAPUS BOT YANG TERSAMBUNG KE ADS LIVEGRAM</button>
+    </div>
+  </div>
+
+  <audio id="backgroundMusic" loop style="display:none;">
+    <source src="https://k.top4top.io/m_3367yg6pc0.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="copyright">
+    &copy; 2025 Aden Cool. Semua hak dilindungi. Izin resmi untuk penggunaan atau reproduksi konten situs web ini harus diperoleh secara tertulis dari Aden Cool.
+  </div>
+
+  <!-- File JavaScript yang dipanggil -->
+  <script src="assets/allaction.js"></script>
+  <script src="assets/deletewhok.js"></script>
+  <script src="assets/eror.js"></script>
+  <script src="assets/hasil.js"></script>
+  <script src="assets/infowhok.js"></script>
+  <script src="assets/musik.js"></script>
+  <script src="assets/result.js"></script>
+</body>
+          </html>
