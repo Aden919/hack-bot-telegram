@@ -4,28 +4,24 @@
   <meta charset="UTF-8">
   <title>Login - Aden Cool</title>
   <style>
-    * {
+    body, html {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
       height: 100%;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
-    /* Video full screen */
     #bg-video {
       position: fixed;
       top: 0;
       left: 0;
       min-width: 100%;
       min-height: 100%;
-      z-index: -1;
       object-fit: cover;
+      z-index: -1;
     }
 
-    /* Login box di tengah */
     .login-box {
       position: absolute;
       top: 50%;
@@ -37,15 +33,14 @@
       text-align: center;
       color: white;
       width: 300px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     }
 
     input, button {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
-      border-radius: 5px;
       border: none;
+      border-radius: 5px;
     }
 
     button {
@@ -55,29 +50,43 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background-color: darkred;
+    #startBtn {
+      background-color: limegreen;
+      margin-top: 30px;
     }
   </style>
-  <script src="assets/stylep.js"></script>
+
+  <script src="assets/x919cool.js"></script>
 </head>
 <body>
 
-  <!-- Video background -->
-  <video autoplay muted loop id="bg-video">
+  <!-- Video dimulai tersembunyi, nanti diputar setelah klik -->
+  <video id="bg-video" loop style="display: none;">
     <source src="https://files.catbox.moe/af6j5a.mp4" type="video/mp4">
-    Browser kamu tidak mendukung video HTML5.
+    Browser tidak mendukung video.
   </video>
 
-  <!-- Kotak login -->
-  <div class="login-box">
-    <h2>Login Admin</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">LOGIN</button>
+  <div class="login-box" id="box">
+    <h2>Selamat Datang</h2>
+    <button id="startBtn" onclick="startLogin()">Mulai Login</button>
   </div>
 
   <script>
+    function startLogin() {
+      const video = document.getElementById("bg-video");
+      video.style.display = "block";
+      video.muted = false;
+      video.play();
+
+      // Ganti konten box jadi form login
+      document.getElementById("box").innerHTML = `
+        <h2>Login Admin</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">LOGIN</button>
+      `;
+    }
+
     function login() {
       const user = document.getElementById('username').value;
       const pass = document.getElementById('password').value;
@@ -90,5 +99,6 @@
       }
     }
   </script>
+
 </body>
 </html>
