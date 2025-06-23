@@ -34,6 +34,14 @@
     </div>
   </div>
 
+<button onclick="logout()" style="position:fixed;bottom:10px;right:10px;">Logout</button>
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "indexx.html";
+  }
+</script>
+
   <div id="response-area" class="hidden">
     <h2 id="tokenDisplay" style="color: #4CAF50;"></h2>
     <h3 id="chatIdDisplay" class="hidden" style="color: #4CAF50;"></h3>
