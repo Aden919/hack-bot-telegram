@@ -34,7 +34,29 @@
     </div>
   </div>
 
-<button onclick="logout()" style="position:fixed;bottom:10px;right:10px;">Logout</button>
+<!-- Tombol Logout di pojok kanan atas -->
+<button onclick="logout()" id="logoutBtn">Logout</button>
+
+<style>
+  #logoutBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    font-weight: bold;
+  }
+
+  #logoutBtn:hover {
+    background-color: darkred;
+  }
+</style>
+
 <script>
   function logout() {
     localStorage.removeItem("loggedIn");
